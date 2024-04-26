@@ -1,4 +1,4 @@
-# Propuesta del Proyecto: NextBill - Backend
+$\color{#37CAEC}{\textsf{# Propuesta del Proyecto: NextBill - Backend}}$
 
 ## Título del Proyecto
 NextBill: Solución Integral de Facturación e Inventario.
@@ -19,7 +19,7 @@ Software de Gestión Empresarial
 | Nombre            | Clan    |
 |-------------------|---------|
 | Daniel Sanchez    | $\color{#37CAEC}{\textsf{Meta}}$  |
-| Hernan            | $\color{#125488}{\textsf{Van Rossum}}$ |
+| Hernan Pereira    | $\color{#125488}{\textsf{Van Rossum}}$ |
 | Samuel Vera       | $\color{#125488}{\textsf{Van Rossum}}$ |
 | Mateo Alvarez     | $\color{#37CAEC}{\textsf{Meta}}$   |
 | Romario Julio     | $\color{#37CAEC}{\textsf{Meta}}$   |
