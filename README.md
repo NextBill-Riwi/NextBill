@@ -18,9 +18,9 @@ Software de Gestión Empresarial
 ## Integrantes
 | Nombre            | Clan    |
 |-------------------|---------|
-| Daniel Sanchez    | <div style='color:#04bade;' >(Meta)</div>    |
-| Hernan            | <div style='color:#de0a26;' >(Lovelace)</div> |
-| Samuel Vera       | <div style='color:#de0a26;' >(Lovelace)</div> |
-| Mateo Alvarez     | <div style='color:#04bade;' >(Meta)</div>    |
-| Romario Julio     | <div style='color:#04bade;' >(Meta)</div>    |
-| Cristian Martinez | <div style='color:#04bade;' >(Meta)</div>    |
+| Daniel Sanchez    | $\color{#37CAEC}{\textsf{Meta}}$  |
+| Hernan            | $\color{#125488}{\textsf{Van Rossum}}$ |
+| Samuel Vera       | $\color{#125488}{\textsf{Van Rossum}}$ |
+| Mateo Alvarez     | $\color{#37CAEC}{\textsf{Meta}}$   |
+| Romario Julio     | $\color{#37CAEC}{\textsf{Meta}}$   |
+| Cristian Martinez | $\color{#37CAEC}{\textsf{Meta}}$   |
