@@ -1,7 +1,6 @@
 # $\color{#37CAEC}{\textsf{Propuesta del Proyecto: NextBill - Backend}}$
 
-## Título del Proyecto
-NextBill: Solución Integral de Facturación e Inventario.
+Solución Integral de Facturación e Inventario.
 
 ## ¿Por Qué?
 El proyecto NextBill surge de la necesidad de ofrecer una solución integral y moderna para la gestión de facturación e inventario, abordando las deficiencias y limitaciones de los sistemas existentes en el mercado colombiano.
