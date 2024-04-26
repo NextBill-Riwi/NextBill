@@ -1,4 +1,4 @@
-$\color{#37CAEC}{\textsf{# Propuesta del Proyecto: NextBill - Backend}}$
+# $\color{#37CAEC}{\textsf{Propuesta del Proyecto: NextBill - Backend}}$
 
 ## Título del Proyecto
 NextBill: Solución Integral de Facturación e Inventario.
