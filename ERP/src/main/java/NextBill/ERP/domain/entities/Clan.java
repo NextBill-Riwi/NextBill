@@ -1,10 +1,12 @@
 package NextBill.ERP.domain.entities;
 
-
 import java.util.List;
+
+import org.springframework.context.annotation.Primary;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -15,36 +17,28 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity(name = "user")
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Clan {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    
-    @Column(nullable = false)
-    private int total_points;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idClan;
 
-    @Column(length = 45, nullable = false)
-    private String user_password;
+    @Column(length = 100, nullable = false)
+    private String nameClan;
 
-    @Column(length = 45, nullable = false)
-    private String user_name;
-    
-    @Column(length = 45, nullable = false)
-    private String email;
-    
-    @Column(length = 45, nullable = false)
-    private String phone_number;
+    @Column
+    private String cohort;
 
-    @Column(nullable = false)
-    private int rol_id;
+    @Column
+    private int points;
 
     @ToString.Exclude // excluimos esta propiedad del to string
     @EqualsAndHashCode.Exclude // excluimos las propiedades dentro la lista
-    @OneToMany(mappedBy = "user")
-    private List<UserClan> asignedClans;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "UserClan")
+    private List<UserClan> usersInClan;
+
 }
