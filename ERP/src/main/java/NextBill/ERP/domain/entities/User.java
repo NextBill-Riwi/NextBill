@@ -26,8 +26,8 @@ import lombok.ToString;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private long id;
     
     @Column(nullable = false)
     private int total_points;
@@ -43,6 +43,9 @@ public class User {
     
     @Column(length = 45, nullable = false)
     private String phone_number;
+
+    @Column(length = 45)
+    private String state;
 
     @ManyToOne
     @JoinColumn(name = "role_id" , referencedColumnName ="id")
