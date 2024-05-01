@@ -4,6 +4,6 @@ import org.springframework.stereotype.Repository;
 import NextBill.ERP.domain.entities.Score;
 
 @Repository
-public interface ScoreRepository extends JpaRepository<Score, Integer>{
+public interface ScoreRepository extends JpaRepository<Score, Long>{
     
 }
