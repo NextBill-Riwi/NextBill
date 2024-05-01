@@ -10,14 +10,17 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import jakarta.persistence.JoinColumn;
 
-@Entity
+@Entity(name ="clan")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -36,9 +39,13 @@ public class Clan {
     @Column
     private int points;
 
-    @ToString.Exclude // excluimos esta propiedad del to string
-    @EqualsAndHashCode.Exclude // excluimos las propiedades dentro la lista
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "UserClan")
-    private List<UserClan> usersInClan;
-
+    @ManyToMany(fetch = FetchType.LAZY)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @JoinTable(
+    name = "clan_user", 
+    joinColumns = @JoinColumn(name = "user_id"), 
+    inverseJoinColumns = @JoinColumn(name = "clan_id")
+    )
+    private List<User> asignedUsers;
 }
