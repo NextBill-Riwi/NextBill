@@ -28,7 +28,7 @@ public class Clan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idClan;
+    private Integer idClan;
 
     @Column(length = 100, nullable = false)
     private String nameClan;
