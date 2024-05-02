@@ -1,6 +1,7 @@
 package NextBill.ERP.domain.entities;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -21,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private long scoreId;
+    private  UUID scoreId;
 
     @Column(nullable = false)
     private int points;

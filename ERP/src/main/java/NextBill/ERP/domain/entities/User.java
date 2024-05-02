@@ -2,6 +2,7 @@ package NextBill.ERP.domain.entities;
 
 
 import java.util.List;
+import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,7 +28,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private long id;
+    private UUID id;
     
     @Column(nullable = false)
     private int total_points;
