@@ -30,6 +30,7 @@ public class ScoreRequest {
     @NotBlank(message = "La descripción es requerida")
     private String description;
 
+    @NotBlank(message = "La fecha es requerida")
     private LocalDateTime creationDate;
 
     @Size(min = 0, max = 32)
