@@ -38,6 +38,6 @@ public class Score {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "asginee_user_id" , referencedColumnName ="id")
-    private User asignerUser;
+    private User asigneeUser;
     
 }
