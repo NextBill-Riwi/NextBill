@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private  UUID scoreId;
+    private  UUID id;
 
     @Column(nullable = false)
     private int points;
