@@ -30,14 +30,14 @@ public class Score {
     @Column(length = 255, nullable = true)
     private String description;
 
+    @Column(nullable = false)
     private LocalDateTime creationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "asgined_user_id" , referencedColumnName ="id")
+    @JoinColumn(name = "asgined_id" , referencedColumnName ="id")
     private User asignedUser;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "asginee_user_id" , referencedColumnName ="id")
-    private User asigneeUser;
-    
+    @JoinColumn(name = "asginer_id" , referencedColumnName ="id")
+    private User asignerUser;    
 }

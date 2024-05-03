@@ -23,10 +23,10 @@ public class Clan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idClan;
+    private int id;
 
     @Column(length = 100, nullable = false)
-    private String nameClan;
+    private String name;
 
     @Column
     private String cohort;

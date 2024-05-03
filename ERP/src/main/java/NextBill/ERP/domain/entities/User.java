@@ -1,11 +1,12 @@
 package NextBill.ERP.domain.entities;
-
-
 import java.util.List;
 import java.util.UUID;
-
+import NextBill.ERP.util.enums.EstudentStatus;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -31,26 +32,27 @@ public class User {
     private UUID id;
     
     @Column(nullable = false)
-    private int total_points;
+    private int totalPoints;
 
     @Column(length = 45, nullable = false)
-    private String user_password;
+    private String password;
 
-    @Column(length = 45, nullable = false)
-    private String user_name;
+    @Column(length = 100, nullable = false)
+    private String name;
     
     @Column(length = 45, nullable = false)
     private String email;
     
     @Column(length = 45, nullable = false)
-    private String phone_number;
+    private String phoneNumber;
 
     @Column(length = 45)
-    private String state;
+    @Enumerated(EnumType.STRING)
+    private EstudentStatus state;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "role_id" , referencedColumnName ="id")
-    private Role userRole;
+    private Role Role;
 
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Clan> asignedClans;
@@ -62,6 +64,6 @@ public class User {
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "asigneeUser")
+    @OneToMany(mappedBy = "asignerUser")
     private List<Score> asignedScore; // Dividido en dos listas separadas
 }
