@@ -3,6 +3,7 @@ package NextBill.ERP.domain.entities;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -39,5 +40,11 @@ public class Score {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "asginer_id" , referencedColumnName ="id")
-    private User asignerUser;    
+    private User asignerUser;
+
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "module_id" , referencedColumnName ="id")
+    private Module moduleScore;
+
+    
 }
