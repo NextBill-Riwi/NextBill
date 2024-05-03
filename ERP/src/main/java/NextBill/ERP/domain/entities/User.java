@@ -48,11 +48,11 @@ public class User {
 
     @Column(length = 45)
     @Enumerated(EnumType.STRING)
-    private EstudentStatus state;
+    private EstudentStatus status;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "role_id" , referencedColumnName ="id")
-    private Role Role;
+    private Role role;
 
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Clan> asignedClans;
