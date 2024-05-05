@@ -7,12 +7,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -53,9 +51,6 @@ public class User {
     @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "role_id" , referencedColumnName ="id")
     private Role role;
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    private List<Clan> asignedClans;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
