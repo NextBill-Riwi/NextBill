@@ -1,4 +1,8 @@
 package NextBill.ERP.api.dtos.response;
+
+import java.util.List;
+
+import NextBill.ERP.domain.entities.Score;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,10 +12,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ClanResponseNoUsers{
-    private int id;
-    private String name;
-    private String cohort;
-    private String url_image;
-    private int points;
+public class UserScore {
+    private List<Score> score;
 }

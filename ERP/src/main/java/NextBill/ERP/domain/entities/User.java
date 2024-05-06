@@ -43,6 +43,9 @@ public class User {
     
     @Column(length = 45, nullable = false)
     private String phoneNumber;
+    
+    @Column(nullable = false)
+    private String url_image;
 
     @Column(length = 45)
     @Enumerated(EnumType.STRING)

@@ -31,6 +31,8 @@ public class UserRequest {
     @NotBlank(message = "El telefono del usuario a crear es requerido")
     private String phone_number;
     
+    @NotBlank(message = "La URL del avatar del usuario a crear es requerida")
+    private String url_image;
     
     @Size(min = 0, max = 32)
     @NotBlank(message = "El total de puntos del usuario a crear es requerido")

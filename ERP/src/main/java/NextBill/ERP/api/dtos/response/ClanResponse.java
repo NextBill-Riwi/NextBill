@@ -15,5 +15,6 @@ public class ClanResponse {
     private String name;
     private String cohort;
     private int points;
+    private String url_image;
     private List<UserResponse> asignedUsers;
 }
