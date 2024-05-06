@@ -1,6 +1,7 @@
 package NextBill.ERP.api.dtos.response;
 
 
+import java.util.List;
 import NextBill.ERP.domain.entities.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserResponse {
+public class UserResponseFull {
 
     private int totalPoints;
     private String email;
@@ -19,5 +20,7 @@ public class UserResponse {
     private String phoneNumber;
     private String urlImage;
     private Role role;
+    private ClanResponseNoUsers clan;
+    private List<UserScore> score;
 
 }

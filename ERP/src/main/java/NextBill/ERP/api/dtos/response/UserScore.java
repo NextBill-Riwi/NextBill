@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserScore {
-    private int asignedUser;
+    private int asignerUser;
     private int points;
     private String description;
     private LocalDateTime creationDate;

@@ -45,7 +45,7 @@ public class User {
     private String phoneNumber;
     
     @Column(nullable = false)
-    private String url_image;
+    private String urlImage;
 
     @Column(length = 45)
     @Enumerated(EnumType.STRING)

@@ -32,7 +32,7 @@ public class Clan {
     private String cohort;
 
     @Column(nullable = false)
-    private String url_image;
+    private String urlImage;
 
     @Column
     private int points;
