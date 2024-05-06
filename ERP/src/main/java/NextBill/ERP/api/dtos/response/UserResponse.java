@@ -18,5 +18,6 @@ public class UserResponse {
     private String phone_number;
     private int total_points;
     private Role role_id;
+    private String url_image;
 
 }
