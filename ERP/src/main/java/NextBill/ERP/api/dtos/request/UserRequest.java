@@ -1,5 +1,7 @@
 package NextBill.ERP.api.dtos.request;
 
+import java.util.UUID;
+
 import NextBill.ERP.domain.entities.Role;
 import NextBill.ERP.util.enums.EstudentStatus;
 import jakarta.validation.constraints.Email;
@@ -16,7 +18,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserRequest {
 
-    @Size(min = 0, max = 32)
+    private UUID id;
+
+    @Size(min = 0, max = 100)
     @Email(message = "El correo debe ser una direccion de correo valida")
     @NotBlank(message = "El correo del usuario a crear es requerido")
     private String email;
@@ -29,18 +33,18 @@ public class UserRequest {
     private String name;
 
     @NotBlank(message = "El telefono del usuario a crear es requerido")
-    private String phone_number;
+    private String phoneNumber;
     
     @NotBlank(message = "La URL del avatar del usuario a crear es requerida")
-    private String url_image;
+    private String urlImage;
     
     @Size(min = 0, max = 32)
     @NotBlank(message = "El total de puntos del usuario a crear es requerido")
-    private int total_points;
+    private int totalCoins;
     
     @Size(min = 0, max = 32)
     @NotBlank(message = "El id del rol para el usuario a crear es requerido")
-    private Role role_id;
+    private int roleId;
     
     private EstudentStatus status;
 }
