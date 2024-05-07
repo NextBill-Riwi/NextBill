@@ -20,6 +20,6 @@ public class UserResponseCoins {
     private String phoneNumber;
     private String urlImage;
     private Role role;
-    private List<UserScore> score;
+    private List<ScoreResponse> score;
 
 }

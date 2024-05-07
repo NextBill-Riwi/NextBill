@@ -1,7 +1,7 @@
 package NextBill.ERP.api.dtos.request;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,11 +13,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ClanRequest {
 
-    @Positive(message = "Id request should be a positive greater than cero")
+    
     private int id;
 
+    @NotBlank(message = "Clan Name is required")
     private String name;
 
+    @NotBlank(message = "Cohort is required")
     private String cohort;
 
     @Pattern(regexp = "^-?\\d+$", message = "Pointsrequest should be a positive or negative integer")

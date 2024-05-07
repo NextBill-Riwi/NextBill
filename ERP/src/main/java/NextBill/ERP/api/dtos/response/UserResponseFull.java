@@ -21,6 +21,6 @@ public class UserResponseFull {
     private String urlImage;
     private Role role;
     private ClanResponseNoUsers clan;
-    private List<UserScore> score;
+    private List<ScoreResponse> score;
 
 }
