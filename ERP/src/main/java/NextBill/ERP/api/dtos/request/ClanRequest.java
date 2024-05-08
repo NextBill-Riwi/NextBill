@@ -25,4 +25,6 @@ public class ClanRequest {
     @Pattern(regexp = "^-?\\d+$", message = "Pointsrequest should be a positive or negative integer")
     private int points;
 
+    private String urlImage;
+
 }
