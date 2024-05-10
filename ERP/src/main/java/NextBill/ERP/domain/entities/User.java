@@ -1,7 +1,7 @@
 package NextBill.ERP.domain.entities;
 import java.util.List;
 import java.util.UUID;
-import NextBill.ERP.util.enums.EstudentStatus;
+import NextBill.ERP.util.enums.StudentStatus;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -49,7 +49,7 @@ public class User {
 
     @Column(length = 45)
     @Enumerated(EnumType.STRING)
-    private EstudentStatus status;
+    private StudentStatus status;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "role_id" , referencedColumnName ="id")

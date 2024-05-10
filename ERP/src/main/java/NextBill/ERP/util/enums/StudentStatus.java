@@ -1,6 +1,6 @@
 package NextBill.ERP.util.enums;
 
-public enum EstudentStatus {
+public enum StudentStatus {
     ACTIVE,
     TRACKING,
     CONDITIONAL,

@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import lombok.ToString;
 import jakarta.persistence.JoinColumn;
 
 @Entity(name ="clan")
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
