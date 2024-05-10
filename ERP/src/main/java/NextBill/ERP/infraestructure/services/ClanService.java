@@ -1,8 +1,11 @@
 package NextBill.ERP.infraestructure.services;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import NextBill.ERP.api.dtos.request.ClanRequest;
@@ -33,19 +36,24 @@ public class ClanService implements IClanService{
         return clanResponsing;
     }
 
-    
-
     @Override
     public void delete(Integer id) {
-        
-        
-        
+        this.clanRepository.deleteById(this.intermediateFind(id).getId());  
     }
 
     @Override
     public Page<ClanResponseNoUsers> getAll(int page, int size) {
-        // TODO Auto-generated method stub
-        return null;
+        if(page<0){
+            page = 0;
+        }
+        PageRequest pagination = PageRequest.of(page, size);
+        return this.clanRepository.findAll(pagination).map(this::entityToClanResponse);
+    }
+
+
+    public List<ClanResponseNoUsers> getAllNoPaginataion(){
+        List<Clan>  clanList  = this.clanRepository.findAll();
+        return clanList.stream().map(clanResponse -> entityToClanResponse(clanResponse)).toList();
     }
 
     @Override
@@ -54,18 +62,18 @@ public class ClanService implements IClanService{
         return clanResponseNoUsers;
     }
 
- 
-
-
     @Override
     public ClanResponseNoUsers update(ClanRequest request, Integer id) {
-        // TODO Auto-generated method stub
+        if(id == request.getId()){
+            this.intermediateFind(id);
+            Clan requestedEntity = this.ClanRequestToEntity(request);
+            this.clanRepository.save(requestedEntity);
+        }else{
+            throw new BadRequestException(ErrorMessages.idNotMatched("Clan"));
+        }
         return null;
     }
     
-
-
-
     //METODOS INTERMEDIARIOS
 
     private Clan intermediateFind(Integer id) {
