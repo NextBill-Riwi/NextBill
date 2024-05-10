@@ -2,8 +2,7 @@ package NextBill.ERP.api.dtos.request;
 
 import java.util.UUID;
 
-import NextBill.ERP.domain.entities.Role;
-import NextBill.ERP.util.enums.EstudentStatus;
+import NextBill.ERP.util.enums.StudentStatus;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -46,5 +45,5 @@ public class UserRequest {
     @NotBlank(message = "El id del rol para el usuario a crear es requerido")
     private int roleId;
     
-    private EstudentStatus status;
+    private StudentStatus status;
 }
